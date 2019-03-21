@@ -1,0 +1,449 @@
+$branco: #fff;
+$preto: #000;
+$cor-padrao: #864053; 
+$cor-padrao-hover: #502638;
+$cor-btn-hover: #100a10;
+$gray: #e5e5e5;
+$cinza: #aaa;
+$titulos: #484848;
+$color-check: #1bd59a;
+$margin-section: 2rem auto;
+$margin-titulos: 1rem 0;
+$body: #f9f9f9;
+%box-shadow{
+  -webkit-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.5);
+}
+
+%width{
+  @media(min-width: 992px){
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@mixin font-size($size) {
+    font-size: $size + px;
+    font-size: ($size/20) + rem;
+  }
+  
+  @mixin input-placeholder-color($color) {
+    &::-webkit-input-placeholder {
+      color: $color !important;
+    }
+    &:-moz-placeholder {
+      color: $color !important;
+    }
+    &::-moz-placeholder {
+      color: $color !important;
+    }
+    &:-ms-input-placeholder {
+      color: $color !important;
+    }
+    &::-ms-placeholder {
+      color: $color !important;
+    }
+    &::placeholder {
+      color: $color !important;
+    }
+  }
+   
+  /*Elementos que sofrerão transições*/
+  a,
+  button,
+  figcaption,
+  .pagination,
+  .nav-item,
+  .nav-link,
+  .btn,
+  .servico,
+  .servico::before,
+  nav {
+    transition: 0.3s all ease-out;
+    -o-transition: 0.3s all ease-out;
+    -moz-transition: 0.3s all ease-out;
+    -webkit-transition: 0.3s all ease-out;
+  }
+  
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+  
+  input,
+  select,
+  textarea {
+    height: auto;
+    border-radius: 0;
+  }
+  
+  textarea {
+    max-height: 200px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  figure {
+    position: relative;
+  
+    figcaption {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+  
+  html,
+  body {
+    background-color: $body;
+	  font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1;
+  }
+
+  p{
+	  font-size: 1.15rem;
+	  font-weight: 300;
+    margin-bottom: .5rem;
+    color: $titulos;
+  }
+
+  h2{
+		font-size: 2.5rem;
+		font-weight: 600;
+		color: $titulos;
+	}
+  
+  @media (min-width: 1200px) {
+    html,
+    body {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 1199px) {
+    html,
+    body {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 991px) {
+    html,
+    body {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 768px) {
+    html,
+    body {
+      font-size: 13px;
+    }
+  }
+  
+  /*Modificações*/
+  .wpcf7-response-output {
+    color: inherit;
+    font-size: 18px;
+    text-align: center;
+    padding: 1rem !important;
+    font-weight: 400;
+    border-width: 6px !important;
+    margin: 0;
+  }
+
+  header{
+    position: absolute;
+    z-index: 1;
+
+    .nav-item{
+      .nav-link{        
+          color: $branco;
+          font-weight: 300;
+          font-size: 1.25rem;     
+      }
+    }
+  }
+  
+  .btn {
+    white-space: normal;
+    padding: .5rem 1.5rem;
+    border-radius: 0;
+  }
+
+  .btn-contact{
+    background-color: $gray;
+    border: 1px solid $gray;
+    color: $preto;
+    font-weight: 600;
+    
+    &:hover{
+      background-color: $cor-padrao-hover;
+      border: 1px solid $cor-padrao-hover;
+      color: $branco;
+    }
+  }
+
+  .btn-pro{
+    background-color: $cor-padrao-hover;
+    border: 1px solid $cor-padrao-hover; 
+    color: $branco;
+
+    &:hover{
+      background-color: $cor-btn-hover;
+      border: 1px solid $cor-btn-hover;
+    }
+  }
+
+  .navbar-item{
+    .is-grouped{
+		display: flex;
+		align-items: center;
+
+   	.icon{
+		  color: $preto;
+		  
+		  &:hover{
+			  color: $cor-padrao-hover;
+		  }
+		}
+		
+		.button{
+			border: 1px solid $cor-padrao;
+			background-color: $cor-padrao;
+			color: $branco;
+
+			.icon{
+				color: $branco;
+			}
+
+			&:hover{
+				background-color: $cor-padrao-hover;
+			}
+		}
+
+   }
+  }
+
+  footer{
+    h3{
+      color: $cinza;
+    }
+  
+    a, i, p{
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: $cinza;
+    }
+
+    .fab {
+      &:hover{
+          color: $cor-padrao-hover;        
+      }
+    }
+
+    a{
+      &:hover{
+        color: $titulos;
+      }
+    }
+  
+  }
+
+  #backToTop{
+    color: $branco;
+    background-color: $cor-padrao-hover;
+  }
+
+  .banner{
+    width: 100%;
+
+    figure{
+        
+      img{
+        width: 100vw; // usar vw (view-width)
+        height: 100vh; // usar vh (view-height)				
+      }
+    
+      figcaption{
+        h1{          
+          font-size: 3rem;
+          color: $branco;
+        }
+
+        h2{
+          color: $branco;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .section-about{
+    @extend %width;
+
+    .card{
+			transform: scale(1);
+      transition: all 300ms ease;
+      border-radius: 0;
+      padding: 1rem;
+      @extend %box-shadow;
+			
+			&:hover{
+				background-color: $cor-padrao-hover;
+				transform: scale(1.05);
+				transition: all 300ms ease;
+        color: $branco;
+        
+        p{
+          color: $branco;
+        }
+			}
+
+			.card-content, .card-body{
+				text-align: center;
+	
+				i{
+					margin: 1rem 0;
+					font-size: 3rem;
+				}
+      }    
+		}
+  }
+
+  .section-client{
+    @extend %width;
+
+    h2{
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .card{
+      border-radius: 0;
+      @extend %box-shadow;
+    }
+
+    .card-client{
+      transform: scale(1);
+      transition: all 300ms ease;
+      border-radius: 0;
+      padding: 1rem;
+      @extend %box-shadow;
+			
+			&:hover{
+				background-color: $cor-padrao-hover;
+				transform: scale(1.05);
+				transition: all 300ms ease;
+        color: $branco;
+        
+        p{
+          color: $branco;
+        }
+			}
+    }
+
+    .slick-track{
+      height: 320px;
+
+      @media(min-width: 992px){
+        height: 410px;
+      }
+    }
+
+    .card-pro{
+      transform: scale(1.08);
+    }
+    
+    .list-plans{
+      
+      list-style: none !important;
+    
+      i{
+        margin-right: .5rem;
+        color: $gray;
+      }
+    
+      .active{
+        color: $color-check;
+      }
+    
+      li{
+        margin: 1rem 0;
+      }
+    }
+
+    .modal{
+      a{
+        color: $titulos;
+
+        &:hover{
+          background-color: $cor-padrao-hover;
+          color: $branco;
+        }
+      }
+    }
+  }
+
+.section-contact{
+  
+  h2{
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  input, textarea{
+    width: 100%;
+  }
+
+  .input-field {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+  
+  .input-field{
+    input {
+      display: block;
+      border: none;
+      padding: 1rem 0;
+      border-bottom: solid 1px $gray;
+      -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+      transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, $cor-padrao-hover 4%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, $cor-padrao-hover 4%);
+      background-position: -200px 0;
+      background-size: 200px 100%;
+      background-repeat: no-repeat;
+      color: $cor-padrao-hover;
+  
+      &:focus{
+        border-bottom: solid 1px $cor-padrao-hover;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+    
+  
+    label {
+      color: #9e9e9e;
+      font-size: 1rem;
+      position: absolute;
+      top: 12px;
+      transition: .2s ease-out;
+    }
+  }
+}
+
+
+
+
