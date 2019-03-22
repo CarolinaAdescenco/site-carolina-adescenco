@@ -61,7 +61,7 @@
 
   <section class="banner">    
     <figure class="d-none d-md-block">
-      <img src="assets/images/carolina-adescenco-webdeveloper.jpg" alt="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" title="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" class="img-fluid">
+      <img src="assets/images/carolina/carolina-adescenco-webdeveloper.jpg" alt="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" title="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" class="img-fluid">
       <figcaption class="align-items-center">
         <div class="container">
           <div class="row mx-0">
@@ -74,7 +74,7 @@
       </figcaption>
     </figure> 
     <figure class="d-block d-md-none">
-      <img src="assets/images/carolina-adescenco-webdeveloper-mobile.jpg" alt="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" title="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" class="img-fluid">
+      <img src="assets/images/carolina/carolina-adescenco-webdeveloper-mobile.jpg" alt="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" title="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" class="img-fluid">
       <figcaption class="align-items-center">
         <div class="container">
           <div class="row mx-0">
@@ -116,7 +116,7 @@
         <div class="col-12 col-md-8">
             <h2 class="my-3">Sobre</h2>
             <p>Apaixonada pela parte visual de aplicações UX e UI, Front End Web Developer. Desenvolvo sites com as principais ferramentas do mercado, como <strong>HTML, CSS, Bootstrap, JavaScript, JQuery, PHP, WordPress.</strong></p>
-            <img class="img-fluid my-3 my-md-5" src="assets/images/carolina-adescenco-webdeveloper-code.jpg" alt="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" title="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce">
+            <img class="img-fluid my-3 my-md-5" src="assets/images/carolina/carolina-adescenco-webdeveloper-code.jpg" alt="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce" title="Carolina Adescenco - Desenvolvimento de sites, lojas virtuais, e-commerce">
          </div>  
       </div>
     </div>
@@ -125,10 +125,11 @@
 
   <section id="client" class="section-client my-5 my-md-0">
     <div class="container">
-      <h2>Clientes</h2>
-      <div class="row mx-0">
-          <div class="col-12 col-md-4">
-            <button type="button" class="card card-client" data-toggle="modal" data-target="#exampleModal">
+      <h2>Portfólio</h2>
+      <div class="row justify-content-around mx-0" id="conteudo-portfolio">
+        <!-- <div> 
+          <div class="col-12 col-md-5">
+            <button type="button" class="card card-client py-5" data-toggle="modal" data-target="#exampleModal" style="background-image: url(assets/images/fastercep/bkg-fastercep.jpg); background-size: cover; background-repeat: no-repeat;">
                 <div class="card-body">
                   <div class="card-title text-center">
                     <h3 class="title is-4">Faster Cep</h3>
@@ -138,7 +139,6 @@
             </button>
           </div>
             
-          <!-- Modal -->
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -146,14 +146,14 @@
                   <h5 class="modal-title" id="exampleModalLabel">Faster Cep</h5>
                 </div>
                 <div class="modal-body">      
-                    <a href="assets/images/fastercep.png" class="card my-3 col-12 col-md-8 mx-auto" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
+                    <a href="assets/images/fastercep/fastercep-desktop.png" class="card my-3 col-12 col-md-8 mx-auto" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
                       <div class="card-body">
                         <div class="card-title my-0 text-center">
                           <h3 class="title my-0">Desktop</h3>
                         </div>
                       </div>
                     </a>
-                    <a href="assets/images/fastercep-mobile.png" class="card my-3 col-12 col-md-8 mx-auto" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
+                    <a href="assets/images/fastercep/" class="card my-3 col-12 col-md-8 mx-auto" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
                       <div class="card-body">
                         <div class="card-title my-0 text-center">
                           <h3 class="title my-0">Mobile</h3>
@@ -168,27 +168,9 @@
             </div>
           </div>
 
+        </div>-->
 
-          <!-- <a href="#" class="col-12 col-md-4">
-            <div class="card">                
-              <div class="card-body">
-                <div class="card-title text-center">
-                  <h3 class="title is-4">Faster Cep</h3>
-                  <p class="subtitle is-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="col-12 col-md-4">
-            <div class="card">                
-              <div class="card-body">
-                <div class="card-title text-center">
-                  <h3 class="title is-4">Faster Cep</h3>
-                  <p class="subtitle is-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                </div>
-              </div>
-            </div>
-          </a> -->
+
       </div>
     </div>
   </section>
@@ -302,6 +284,8 @@
   <script type="text/javascript" src="assets/lightbox/js/lightbox.min.js"></script>
   <!-- Main JS -->
   <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/portfolio.js"></script>
+  
 </body>
 
 </html>

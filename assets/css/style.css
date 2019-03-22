@@ -56,6 +56,15 @@ figure {
     top: 0;
     width: 100%; }
 
+.lb-outerContainer {
+  width: 50% !important;
+  height: 50% !important;
+  overflow: scroll; }
+
+.lb-image {
+  width: 100% !important;
+  height: 100% !important; }
+
 html,
 body {
   background-color: #f9f9f9;
@@ -129,8 +138,8 @@ header {
   border: 1px solid #502638;
   color: #fff; }
   .btn-pro:hover {
-    background-color: #100a10;
-    border: 1px solid #100a10; }
+    background-color: #3e242f;
+    border: 1px solid #3e242f; }
 
 .navbar-item .is-grouped {
   display: flex;
@@ -203,14 +212,13 @@ footer a:hover {
   transform: scale(1);
   transition: all 300ms ease;
   border-radius: 0;
-  padding: 1rem; }
-  .section-client .card-client:hover {
-    background-color: #502638;
-    transform: scale(1.05);
-    transition: all 300ms ease;
+  padding: 1rem;
+  color: #fff; }
+  .section-client .card-client p {
     color: #fff; }
-    .section-client .card-client:hover p {
-      color: #fff; }
+  .section-client .card-client:hover {
+    transform: scale(1.05);
+    transition: all 300ms ease; }
 .section-client .slick-track {
   height: 320px; }
   @media (min-width: 992px) {

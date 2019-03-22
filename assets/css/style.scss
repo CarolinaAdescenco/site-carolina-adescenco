@@ -2,7 +2,7 @@ $branco: #fff;
 $preto: #000;
 $cor-padrao: #864053; 
 $cor-padrao-hover: #502638;
-$cor-btn-hover: #100a10;
+$cor-btn-hover: #3e242f;
 $gray: #e5e5e5;
 $cinza: #aaa;
 $titulos: #484848;
@@ -102,6 +102,18 @@ $body: #f9f9f9;
       top: 0;
       width: 100%;
     }
+  }
+
+  // Lightbox
+  .lb-outerContainer{
+    width: 50% !important;
+    height: 50% !important;
+    overflow: scroll;
+  }
+
+  .lb-image{
+    width: 100% !important;
+    height: 100% !important;
   }
   
   html,
@@ -340,16 +352,15 @@ $body: #f9f9f9;
       border-radius: 0;
       padding: 1rem;
       @extend %box-shadow;
+      color: $branco;
+
+      p{
+        color: $branco;
+      }
 			
 			&:hover{
-				background-color: $cor-padrao-hover;
 				transform: scale(1.05);
 				transition: all 300ms ease;
-        color: $branco;
-        
-        p{
-          color: $branco;
-        }
 			}
     }
 
