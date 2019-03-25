@@ -58,8 +58,8 @@ figure {
 
 .lb-outerContainer {
   width: 50% !important;
-  height: 50% !important;
-  overflow: scroll; }
+  height: 600px !important;
+  overflow-y: scroll; }
 
 .lb-image {
   width: 100% !important;
@@ -226,20 +226,16 @@ footer a:hover {
       height: 410px; } }
 .section-client .card-pro {
   transform: scale(1.08); }
-.section-client .list-plans {
-  list-style: none !important; }
-  .section-client .list-plans i {
-    margin-right: .5rem;
-    color: #e5e5e5; }
-  .section-client .list-plans .active {
-    color: #1bd59a; }
-  .section-client .list-plans li {
-    margin: 1rem 0; }
-.section-client .modal a {
-  color: #484848; }
-  .section-client .modal a:hover {
-    background-color: #502638;
-    color: #fff; }
+.section-client .modal {
+  align-items: center; }
+  .section-client .modal .modal-body .modal-item {
+    padding: 2rem; }
+    .section-client .modal .modal-body .modal-item i {
+      color: #484848; }
+    .section-client .modal .modal-body .modal-item:hover {
+      background-color: #502638; }
+      .section-client .modal .modal-body .modal-item:hover i {
+        color: #fff; }
 
 .section-contact h2 {
   text-align: center;
@@ -249,7 +245,7 @@ footer a:hover {
 .section-contact .input-field {
   position: relative;
   margin-bottom: 3rem; }
-.section-contact .input-field input {
+.section-contact .input-field input, .section-contact .input-field textarea {
   display: block;
   border: none;
   padding: 1rem 0;
@@ -262,7 +258,7 @@ footer a:hover {
   background-size: 200px 100%;
   background-repeat: no-repeat;
   color: #502638; }
-  .section-contact .input-field input:focus {
+  .section-contact .input-field input:focus, .section-contact .input-field textarea:focus {
     border-bottom: solid 1px #502638;
     box-shadow: none;
     outline: none; }

@@ -18,15 +18,18 @@ const requestAjax = (URL_TO_FETCH, func, method = 'get', contentJson = null) => 
     } 
 }
 
+
+
+
 const makeHtml = (content) => {
     
     let html = '';
     content.forEach((e,i) =>{
-
+        
         html += `
        
             <div class="col-12 col-md-5">
-                <button type="button" class="card card-client py-5" data-toggle="modal" data-target="#exampleModal" style="background-image: url(${e.backgroundCard}); background-size: cover; background-repeat: no-repeat;">
+                <button type="button" class="card card-client py-5" data-toggle="modal" data-target="#portfolio-${i}" style="background-image: url(${e.backgroundCard}); background-size: cover; background-repeat: no-repeat;">
                     <div class="card-body">
                     <div class="card-title text-center">
                         <h3 class="title is-4">${e.nome}</h3>
@@ -37,30 +40,30 @@ const makeHtml = (content) => {
             </div>
                 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="portfolio-${i}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Faster Cep</h5>
+                        <div class="modal-header align-items-center">
+                        <h5 class="modal-title" id="exampleModalLabel">${e.nome}</h5>
+                        <button type="button" class="close mx-3" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                         </div>
-                        <div class="modal-body">      
-                            <a href="${e.imagemDesktop}" class="card my-3 col-12 col-md-8 mx-auto" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
-                            <div class="card-body">
-                                <div class="card-title my-0 text-center">
-                                <h3 class="title my-0">Desktop</h3>
+                        <div class="modal-body row mx-0 p-0 justify-content-around">  
+                            <a href="${e.imagemDesktop}" class="col-12 col-md-6 modal-item" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
+                                <div class="card-body">
+                                    <div class="card-title my-0 text-center">
+                                    <h3 class="title my-0"><i class="fas fa-desktop"></i></h3>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
-                            <a href="${e.imagemMobile}" class="card my-3 col-12 col-md-8 mx-auto" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
-                            <div class="card-body">
-                                <div class="card-title my-0 text-center">
-                                <h3 class="title my-0">Mobile</h3>
+                            <a href="${e.imagemMobile}" class="col-12 col-md-6 modal-item" data-toggle="modal" data-target="#exampleModal" data-lightbox="image-1" data-title="Galeria">
+                                <div class="card-body">
+                                    <div class="card-title my-0 text-center">
+                                    <h3 class="title my-0"><i class="fas fa-mobile-alt"></i></h3>
+                                    </div>
                                 </div>
-                            </div>
                             </a>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-pro" data-dismiss="modal"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
                 </div>
