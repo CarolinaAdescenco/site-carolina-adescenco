@@ -251,25 +251,28 @@ $body: #f9f9f9;
   }
 
   footer{
+
+    background-image: linear-gradient(lighten($cor-padrao-hover, 15), $cor-padrao-hover); 
+
     h3{
-      color: $cinza;
+      color: $branco;
     }
   
     a, i, p{
       font-size: 1.15rem;
       font-weight: 300;
-      color: $cinza;
+      color: $branco;
     }
 
     .fab {
       &:hover{
-          color: $cor-padrao-hover;        
+          color: $branco;        
       }
     }
 
     a{
       &:hover{
-        color: $titulos;
+        color: $branco;
       }
     }
   
@@ -313,26 +316,46 @@ $body: #f9f9f9;
       transition: all 300ms ease;
       border-radius: 0;
       padding: 1rem;
-      @extend %box-shadow;
+      // @extend %box-shadow;
+      background: $branco;
+
+      &:after{
+        content: '';
+        border-radius: 0 1rem 1rem 0;
+        width: 5px;
+        height: 50%;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        right: -5px;
+        transform: none;
+        opacity: .9;
+        background-image: linear-gradient(lighten($cor-padrao-hover, 30), $cor-padrao-hover);
+      }
+      
 			
 			&:hover{
-				background-color: $cor-padrao-hover;
+        // background-color: $cor-padrao-hover;
+        background-image: linear-gradient(lighten($cor-padrao-hover, 30), $cor-padrao-hover);
 				transform: scale(1.05);
 				transition: all 300ms ease;
         color: $branco;
+        border: none;
         
         p{
           color: $branco;
         }
+
 			}
 
 			.card-content, .card-body{
-				text-align: center;
-	
+        text-align: center;
+      
 				i{
 					margin: 1rem 0;
 					font-size: 3rem;
-				}
+        }       
+        
       }    
 		}
   }
